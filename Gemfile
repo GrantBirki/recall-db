@@ -4,6 +4,7 @@ source "https://rubygems.org"
 
 gem "csv", "~> 3.3", ">= 3.3.2"
 gem "redacting-logger", "~> 1"
+gem "sqlite3", "~> 2.5"
 
 group :development do
   gem "irb", "~> 1.14"

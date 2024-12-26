@@ -1,6 +1,9 @@
+# exclude raw data
 *.csv
-.ruby-lsp
+*.db
 
+# ruby files
+.ruby-lsp
 .bundle
 bin
 coverage
@@ -17,7 +20,6 @@ vendor/gems
 *.crt
 *.csr
 *.secret
-
 /.bundle
 /vendor/gems
 

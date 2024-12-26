@@ -1,6 +1,8 @@
 # exclude raw data
 *.csv
 *.db
+*.db-shm
+*.db-wal
 
 # ruby files
 .ruby-lsp

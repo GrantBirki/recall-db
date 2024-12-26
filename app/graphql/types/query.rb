@@ -7,5 +7,9 @@ module Types
     def products
       Product.all
     end
+
+    # def foods
+    #   Food.all
+    # end
   end
 end

@@ -4,21 +4,18 @@ require "sinatra"
 require "sinatra/activerecord"
 require "graphql"
 require "json"
-require_relative "app/graphql/types/product"
-require_relative "app/graphql/types/query"
-require_relative "app/graphql/schema"
+require_relative "app/config/environment"
 
-set :database, { adapter: "sqlite3", database: "schemas/products/products.db" }
-
-class Product < ActiveRecord::Base
-end
+# Require all models
+Dir[File.join(__dir__, "app/models/*.rb")].each { |file| require file }
 
 post "/graphql" do
   request_payload = JSON.parse(request.body.read)
   result = Schema.execute(
     request_payload["query"],
     variables: request_payload["variables"],
-    context: {}
+    context: {},
+    operation_name: request_payload["operationName"]
   )
   content_type :json
   JSON.generate(result)

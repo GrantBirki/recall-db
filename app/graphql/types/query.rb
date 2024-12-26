@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "graphql-fragment_cache"
-
 module Types
   class QueryType < GraphQL::Schema::Object
     include GraphQL::FragmentCache::Object

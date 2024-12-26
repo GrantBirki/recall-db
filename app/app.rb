@@ -3,6 +3,7 @@
 require "sinatra"
 require "sinatra/activerecord"
 require "graphql"
+require "graphql-fragment_cache"
 require "json"
 require_relative "config/environment"
 

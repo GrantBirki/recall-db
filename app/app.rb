@@ -4,10 +4,10 @@ require "sinatra"
 require "sinatra/activerecord"
 require "graphql"
 require "json"
-require_relative "app/config/environment"
+require_relative "config/environment"
 
 # Require all models
-Dir[File.join(__dir__, "app/models/*.rb")].each { |file| require file }
+Dir[File.join(__dir__, "models/*.rb")].each { |file| require file }
 
 post "/graphql" do
   request_payload = JSON.parse(request.body.read)

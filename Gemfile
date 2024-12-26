@@ -4,6 +4,7 @@ source "https://rubygems.org"
 
 gem "csv", "~> 3.3", ">= 3.3.2"
 gem "graphql", "~> 2.4", ">= 2.4.8"
+gem "graphql-fragment_cache", "~> 1.20", ">= 1.20.5"
 gem "puma", "~> 6.5"
 gem "rackup", "~> 2.2", ">= 2.2.1"
 gem "redacting-logger", "~> 1"

@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
 module Types
-  class ProductType < GraphQL::Schema::Object
-    field :id, ID, null: false
+  class ProductType < QueryType
+    field :id, ID, null: false, cache_fragment: true
     field :sha, String, null: false
-    field :recall_number, String, null: true, method: :recall_number
+    field :recall_number, String, null: true, method: :recall_number, cache_fragment: true
     field :warning_number, String, null: true, method: :warning_number
-    field :date, String, null: true, method: :date
+    field :date, String, null: true, method: :date, cache_fragment: true
     field :warning_date, String, null: true, method: :warning_date
     field :recall_heading, String, null: true, method: :recall_heading
-    field :product_name, String, null: true, method: :product_name
+    field :product_name, String, null: true, method: :product_name, cache_fragment: true
     field :description, String, null: true, method: :description
     field :hazard_description, String, null: true, method: :hazard_description
     field :consumer_action, String, null: true, method: :consumer_action

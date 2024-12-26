@@ -3,7 +3,12 @@
 source "https://rubygems.org"
 
 gem "csv", "~> 3.3", ">= 3.3.2"
+gem "graphql", "~> 2.4", ">= 2.4.8"
+gem "puma", "~> 6.5"
+gem "rackup", "~> 2.2", ">= 2.2.1"
 gem "redacting-logger", "~> 1"
+gem "sinatra", "~> 4.1", ">= 4.1.1"
+gem "sinatra-activerecord", "~> 2.0", ">= 2.0.28"
 gem "sqlite3", "~> 2.5"
 
 group :development do
